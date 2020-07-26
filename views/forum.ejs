@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+<a href='/forums/new' class="ui black basic button">Ask Your Doubt Here</a>
+<div class="ui main text container">
+  <div class="ui huge header">Say Bye to Bugs</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <% forums.forEach(function(forum){ %>
+         <div class="content">
+          <a class="header" href="/forums/<%=forum._id%>"><%= forum.topic %></a>
+          <div class="meta">
+                  <span><%= forum.created %></span>
+                  </div>
+                  <div class="description">
+          <p><%- forum.description.substring(0,100) %></p>
+          </div>
+          <div class="extra">
+          <a class="ui floated violet basic button" href="/forums/<%=forum._id%>">Read More<i class="right chevron icon centered"></i></a>
+        </div>
+        </div>
+        </div>
+      <% }) %>
+      </div>
+    </div>
+<% include ./partials/footer %>

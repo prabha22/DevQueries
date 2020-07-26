@@ -1,0 +1,110 @@
+<% include ./partials/header %>
+
+<!--<h1>Login!</h1>
+<form action="/login" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="Login!">
+</form> -->
+
+
+
+<style>
+body{
+  margin:0;
+  padding-top:400px;
+  font-family:sans-serif;
+  background-repeat:no-repeat;
+  background-size: 1900px 800px;
+  background-image:url("http://tnpoompuhar.org/wp/wp-content/uploads/2016/08/Indian-Handicrafts1.jpg");
+
+}
+.bg{
+    opacity:0.5;
+}
+
+.box{
+  width:400px;
+  padding:40px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:#000000;
+  text-align:center;
+  background-size:auto;
+  border-radius:30px;
+  height:400px;
+
+
+}
+.box input[type="email"],.box input[type="password"]{
+  border:0;
+  background:none;
+  display:block;
+  margin:4px auto;
+  text-align:center;
+  border:2px solid #2ecc71;
+  padding:14px 10px;
+  width:200px;
+  outline:none;
+  color:white;
+  border-radius:24px;
+  transition:0.25s;
+}
+.box h1{
+  color:white;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.box input[type="email"]:focus,.box input[type="password"]:focus{
+  width:280px;
+  border-color:#2ecc71;
+}
+.box input[type="submit"]{
+  border:0;
+  background:none;
+  display:block;
+  margin:2px auto;
+  text-align:center;
+  border:2px solid #2ecc71;
+  padding:14px 10px;
+  width:200px;
+  outline:none;
+  color:white;
+  border-radius:24px;
+  transition:0.25s;
+  cursor:pointer;
+}
+.box input[type="submit"]:hover{
+  background:#2ecc71;
+
+}
+
+</style>
+
+
+<div class="row">
+  <div class="col-lg-6 col-md-offset-3">
+    <% if (message.length >0){%>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%=message%>
+      </div>
+        <%}%>
+
+      <form class="box" method="post">
+        <h1>Login</h1>
+
+
+        <input type="email" name="email">
+
+
+        <input type="password" name="password">
+
+        <input type='submit' value="Submit">
+        </form>
+
+<% include ./partials/footer %>

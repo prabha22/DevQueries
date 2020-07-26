@@ -1,0 +1,10 @@
+i.icon{
+  font-size:3em;
+}
+body{
+  padding-top: 90px;
+  background-color: #9fd3fa;
+}
+#delete{
+  display: inline;
+}

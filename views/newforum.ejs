@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+  <div class="ui huge header">Add a new Doubt</div>
+  <form class="ui form" action="/forums" method="POST">
+    <div class="field">
+      <label>Topic:</label>
+      <input type="text" name="forum[topic]" placeholder="Topic">
+      </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea name="forum[description]"></textarea>
+          </div>
+          <input type="submit" class="ui violet basic button">
+          </form>
+          </div>
+<% include ./partials/footer %>

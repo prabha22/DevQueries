@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+<div class="ui huge header"><%= forum.topic %></div>
+<div class="ui top attached segment">
+      <span><%= forum.created.toDateString() %></span>
+</div>
+<div class="description">
+  <p><%= forum.description%></p>
+  </div>
+  <a class="ui red basic button" href="/forums/<%= forum._id %>/edit">Edit</a>
+
+  <form id="delete" action="/forums/<%= forum._id %>?_method=DELETE" method="POST">
+    <button class="ui red basic button">Delete</button>
+    <button class="ui green basic button" style="text-align:right">Comment</button>
+    </form>
+</div>
+</div>
+</div>
+<% include ./partials/footer %>
